@@ -1,0 +1,31 @@
+Table HTML:
+<table id="example" class="table table-striped table-bordered dataTable no-footer" aria-describedby="example_info">
+                        <thead>
+                            <tr><th class="sorting sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 101.433px;" aria-sort="ascending" aria-label="Student Name: activate to sort column descending">Student Name</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 54.6333px;" aria-label="Gender: activate to sort column ascending">Gender</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 78.15px;" aria-label="Class Level: activate to sort column ascending">Class Level</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 82.8px;" aria-label="Home State: activate to sort column ascending">Home State</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 105.233px;" aria-label="Major: activate to sort column ascending">Major</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 164.15px;" aria-label="Extracurricular Activity: activate to sort column ascending">Extracurricular Activity</th></tr>
+                        </thead>
+                        <tbody id="demo"><tr class="odd">
+                    <td class="sorting_1">Alice Johnson</td>
+                    <td>Female</td>
+                    <td>Sophomore</td>
+                    <td>Texas</td>
+                    <td>Mathematics</td>
+                    <td>Debate Team</td>
+                </tr><tr class="even">
+                    <td class="sorting_1">Bob Williams</td>
+                    <td>Male</td>
+                    <td>Freshman</td>
+                    <td>Florida</td>
+                    <td>Physics</td>
+                    <td>Soccer</td>
+                </tr><tr class="odd">
+                    <td class="sorting_1">Daniel Martinez</td>
+                    <td>Male</td>
+                    <td>Freshman</td>
+                    <td>Nevada</td>
+                    <td>Political Science</td>
+                    <td>Football</td>
+                </tr></tbody>
+                    </table>
+
+Pagination HTML:
+<ul class="pagination"><li class="paginate_button page-item previous disabled" id="example_previous"><a aria-controls="example" aria-disabled="true" aria-role="link" data-dt-idx="previous" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example" aria-role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example" aria-role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example" aria-role="link" data-dt-idx="2" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example" aria-role="link" data-dt-idx="3" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item next" id="example_next"><a href="#" aria-controls="example" aria-role="link" data-dt-idx="next" tabindex="0" class="page-link">Next</a></li></ul>
