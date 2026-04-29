@@ -26,13 +26,11 @@ jobs:
       run: npm ci
 
     - name: Install Playwright
-      run: npm init playwright@latest
+      run: npm init playwright@latest --install-deps
 
     - name: Install Playwright browsers
-      run: npx playwright install
+      run: npx playwright install --with-deps --only-shell
       
-    - name: Install Playwright dependencies
-      run: npx playwright install-deps 
 
   run-tests:
     needs: prepare-system
