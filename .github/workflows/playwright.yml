@@ -28,9 +28,6 @@ jobs:
     - name: Install Playwright
       run: npm init playwright@latest --install-deps
 
-    - name: Install Playwright browsers
-      run: npx playwright install --with-deps --only-shell
-      
 
   run-tests:
     needs: prepare-system
