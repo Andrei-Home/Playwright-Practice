@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import OTPLoginPage from '../../pages/practice.expandtesting.com-otp-login';
+import OTPLoginPage from '../../pages/practice.expandtesting.com/otp-login';
 
 // OTP Test
 test.describe('OTP Login', () => {

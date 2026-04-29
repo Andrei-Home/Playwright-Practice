@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import BrowserPage from '../../pages/practice.expandtesting.com-my-browser';
+import BrowserPage from '../../pages/practice.expandtesting.com/my-browser';
 
 
 test.describe('My Browser Information', () => {

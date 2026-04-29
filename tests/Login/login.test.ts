@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import LoginPage from '../../pages/practice.expandtesting.com-login';
+import LoginPage from '../../pages/practice.expandtesting.com/login';
 
 //login form
 test('1. Should login with valid credentials', async ({ page }) => {

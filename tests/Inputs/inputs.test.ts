@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import InputsPage from '../../pages/practice.expandtesting.com-inputs';
+import InputsPage from '../../pages/practice.expandtesting.com/inputs';
 
 test.describe('Tests for inputs page', () => { 
 

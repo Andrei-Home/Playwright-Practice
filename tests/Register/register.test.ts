@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import LoginPage from '../../pages/practice.expandtesting.com-register';
-import RegisterPage from '../../pages/practice.expandtesting.com-register';
+import LoginPage from '../../pages/practice.expandtesting.com/register';
+import RegisterPage from '../../pages/practice.expandtesting.com/register';
 
 //Register with short username password. Should generate a error
 test('1. Should register with short username/password', async ({ page }) => {

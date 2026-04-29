@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import DynamicPaginationPage from '../../pages/practice.expandtesting.com-dynamic-pagination';
+import DynamicPaginationPage from '../../pages/practice.expandtesting.com/dynamic-pagination';
 
 test.describe('Dynamic Pagination Table', () => {
 
