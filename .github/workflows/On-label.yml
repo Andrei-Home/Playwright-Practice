@@ -40,7 +40,7 @@ jobs:
     steps:
 
     - name: Run Playwright tests
-      run: npx playwright test -g {{TEST_LABEL}}
+      run: npx playwright test -g {{ github.event.inputs.TEST_LABEL }}
       env:
         CI: true
 
