@@ -1,39 +1,43 @@
 import { test, expect } from '@playwright/test';
-import { info } from '../../utils/logger';
+import { Logger } from '../../utils/logger';
 import LoginPage from '../../pages/practice.expandtesting.com/login';
 
-//login form
-test('1. Should login with valid credentials', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    const testData = {
-        username: "practice",
-        password: "SuperSecretPassword!",
-    }
-    info('Login test: valid credentials', { username: testData.username });
-    await loginPage.navigate(); 
-    await loginPage.login(testData);
-    await expect(loginPage.successMessage).toHaveText('Secure Area page for Automation Testing Practice');
-});
+test.describe('Login Page Tests', () => {
+    let loginPage: LoginPage;
+    const logger = new Logger('LoginPageTest');
 
-test('2. Should login with invalid credentials', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    await loginPage.navigate(); 
-    const testData = {
-        username: "aaa",
-        password: "aaa",
-    }
-    await loginPage.login(testData);
-    await expect(loginPage.errorMessage).toHaveText('Your password is invalid!');
+    test.beforeEach(async ({ page }) => {
+        loginPage = new LoginPage(page);
+        await loginPage.navigate();
+    });
 
-});
-test('3. Should login with invalid credentials', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    await loginPage.navigate(); 
-    const testData = {
-        username: "111",
-        password: "aaa",
-    }
-    await loginPage.login(testData);
-    await expect(loginPage.errorMessage).toHaveText('Your password is invalid!');
+    test('1. Should login with valid credentials', async ({ page }) => {
+        const testData = {
+            username: "practice",
+            password: "SuperSecretPassword!",
+        }
+        logger.info(`Running test: 'Should login with valid credentials' with username: ${testData.username}`);
+        await loginPage.login(testData);
+        await expect(loginPage.successMessage).toHaveText('Secure Area page for Automation Testing Practice');
+    });
 
+    test('2. Should not login with invalid credentials', async ({ page }) => {
+        const testData = {
+            username: "aaa",
+            password: "aaa",
+        }
+        logger.info(`Running test: 'Should not login with invalid credentials' with username: ${testData.username}`);
+        await loginPage.login(testData);
+        await expect(loginPage.errorMessage).toHaveText('Your password is invalid!');
+    });
+
+    test('3. Should not login with invalid password for a valid user', async ({ page }) => {
+        const testData = {
+            username: "practice",
+            password: "aaa",
+        }
+        logger.info(`Running test: 'Should not login with invalid password for a valid user' with username: ${testData.username}`);
+        await loginPage.login(testData);
+        await expect(loginPage.errorMessage).toHaveText('Your password is invalid!');
+    });
 });
