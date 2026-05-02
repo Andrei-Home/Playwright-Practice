@@ -1,4 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
+import { debug } from '../../utils/logger';
 
 class RegisterPage{
     // --- Properties ---
@@ -24,14 +25,16 @@ class RegisterPage{
 
     // --- Methods / Actions ---
     async navigate() {
+        debug('Navigating to register page');
         await this.page.goto('https://practice.expandtesting.com/register');
     }
 
     async register(data: { username: string, password: string, password2: string}) {
+        debug('Registering new user', { username: data.username });
         await this.usernameField.fill(data.username);
         await this.passwordField.fill(data.password);
         await this.confirmpasswordField.fill(data.password2);
-        await  this.registerButton.click();
+        await this.registerButton.click();
     }
 
 }

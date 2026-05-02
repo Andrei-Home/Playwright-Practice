@@ -1,4 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
+import { debug } from '../../utils/logger';
 
 class LoginPage{
     // --- Properties ---
@@ -21,10 +22,12 @@ class LoginPage{
 
     // --- Methods / Actions ---
     async navigate() {
+        debug('Navigating to login page');
         await this.page.goto('https://practice.expandtesting.com/login');
     }
 
     async login(data: { username: string, password: string}) {
+        debug('Logging in with username', data.username);
         await this.usernameField.fill(data.username);
         await this.passwordField.fill(data.password);
         await this.loginButton.click();

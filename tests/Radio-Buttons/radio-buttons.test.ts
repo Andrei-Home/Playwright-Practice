@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { info } from '../../utils/logger';
 import BrowserPage from '../../pages/practice.expandtesting.com/radio-buttons';
 
 test.describe('Radio Buttons', () => {
@@ -6,6 +7,7 @@ test.describe('Radio Buttons', () => {
     
     test.beforeEach(async ({ page }) => {
         radioButtonsPage = new BrowserPage(page);
+        info('Radio buttons test: navigating to page');
         await radioButtonsPage.navigate();
     });
 

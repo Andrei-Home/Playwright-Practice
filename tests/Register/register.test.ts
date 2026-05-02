@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { info } from '../../utils/logger';
 import LoginPage from '../../pages/practice.expandtesting.com/register';
 import RegisterPage from '../../pages/practice.expandtesting.com/register';
 
@@ -44,8 +45,8 @@ test('3. Should register with incorrect confirmation password', async ({ page })
 
 test('4. Should register with Success', async ({ page }) => {
     const registerPage = new RegisterPage(page);
-    const randomUsername = Math.random().toString().substr(2); //Generate random string
-    console.log(randomUsername);
+    const randomUsername = Math.random().toString().substr(2); // Generate random string
+    info('Generated random username for registration:', randomUsername);
     await registerPage.navigate();
     const testData = {
         username: randomUsername,

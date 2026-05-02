@@ -1,4 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
+import { debug } from '../../utils/logger';
 
 class DynamicPaginationPage {
     readonly page: Page;
@@ -18,10 +19,12 @@ class DynamicPaginationPage {
     }
 
     async navigate() {
+        debug('Navigating to dynamic pagination page');
         await this.page.goto('https://practice.expandtesting.com/dynamic-pagination-table');
     }
 
     async getPageItem(pageNumber: number) {
+        debug('Looking up pagination item', pageNumber);
         // The page number is inside an 'a' tag inside the 'li'
         return this.page.locator(`ul.pagination li.paginate_button a`, { hasText: pageNumber.toString() });
     }

@@ -1,4 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
+import { debug } from '../../utils/logger';
 
 class RadioButtonsPage {
     // --- Properties ---
@@ -27,10 +28,12 @@ class RadioButtonsPage {
 
     // --- Methods / Actions ---
     async navigate() {
+        debug('Navigating to radio buttons page');
         await this.page.goto('https://practice.expandtesting.com/radio-buttons');
     }
 
     async selectColor(color: 'blue' | 'red' | 'yellow' | 'black' | 'green') {
+        debug('Selecting radio color', color);
         const colorMap: Record<string, Locator> = {
             blue: this.colorBlue,
             red: this.colorRed,
@@ -42,6 +45,7 @@ class RadioButtonsPage {
     }
 
     async selectSport(sport: 'basketball' | 'football' | 'tennis') {
+        debug('Selecting radio sport', sport);
         const sportMap: Record<string, Locator> = {
             basketball: this.sportBasketball,
             football: this.sportFootball,

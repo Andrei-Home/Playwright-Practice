@@ -1,10 +1,12 @@
 import { test, expect } from '@playwright/test';
+import { info } from '../../utils/logger';
 import InputsPage from '../../pages/practice.expandtesting.com/inputs';
 
 test.describe('Tests for inputs page', () => { 
 
   test('1. Has title', async ({ page }) => {
     const inputsPage = new InputsPage(page);
+    info('Inputs page title verification started');
     await inputsPage.navigate();
 
     // Expect a title "to contain" a substring.

@@ -1,4 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
+import { debug } from '../../utils/logger';
 
 class InputsPage {
     // --- Properties ---
@@ -29,10 +30,16 @@ class InputsPage {
 
     // --- Methods / Actions ---
     async navigate() {
+        debug('Navigating to inputs page');
         await this.page.goto('https://practice.expandtesting.com/inputs');
     }
 
     async submitFormWithValues(data: { number: string, text: string, password: string, date: string }) {
+        debug('Submitting input form', {
+            number: data.number,
+            text: data.text,
+            date: data.date,
+        });
         await this.inputNumber.fill(data.number);
         await this.inputText.fill(data.text);
         await this.inputPassword.fill(data.password);

@@ -1,10 +1,12 @@
 import { test, expect } from '@playwright/test';
+import { info } from '../../utils/logger';
 import DynamicPaginationPage from '../../pages/practice.expandtesting.com/dynamic-pagination';
 
 test.describe('Dynamic Pagination Table @smoke1 @regression', () => {
 
     test('1. Should display table and pagination controls', async ({ page }) => {
         const paginationPage = new DynamicPaginationPage(page);
+        info('Pagination test: verifying table and controls');
         await paginationPage.navigate();
 
         await expect(paginationPage.table).toBeVisible();
@@ -21,6 +23,7 @@ test.describe('Dynamic Pagination Table @smoke1 @regression', () => {
         const firstRowText = await paginationPage.tableRows.first().innerText();
 
         const page2 = await paginationPage.getPageItem(2);
+        info('Navigating to page 2 using pagination controls');
         await page2.click();
 
         // Wait for active class on page 2

@@ -1,4 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
+import { debug } from '../../utils/logger';
 
 class OTPLoginPage {
     // --- Properties ---
@@ -28,10 +29,12 @@ class OTPLoginPage {
 
     // --- Methods / Actions ---
     async navigate() {
+        debug('Navigating to OTP login page');
         await this.page.goto('https://practice.expandtesting.com/otp-login');
     }
 
     async submitFormWithValues(data: { email: string, otp: string}) {
+        debug('Submitting OTP form', { email: data.email, otp: data.otp });
         await this.emailAddressField.fill(data.email);
         await this.sendOTPCodeButton.click();
         await this.OTPCodeField.fill(data.otp);

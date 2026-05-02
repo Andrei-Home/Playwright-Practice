@@ -1,4 +1,5 @@
 import { type Page, type Locator } from '@playwright/test';
+import { debug } from '../../utils/logger';
 
 class BrowserPage {
     // --- Properties ---
@@ -29,6 +30,10 @@ class BrowserPage {
     // --- Methods / Actions ---
     async navigate() {
         await this.page.goto('https://practice.expandtesting.com/my-browser');
+    }
+
+    async clickShowBrowserInformation() {
+        await this.showBrowserInformationButton.click();
     }
 }
 
