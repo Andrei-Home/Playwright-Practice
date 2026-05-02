@@ -50,9 +50,20 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+        
+    - name: Publish Test Report with Pull Request Comment
+      uses: ctrf-io/github-test-reporter@v1
+      with:
+        report-path: './playwright-report/*.html'
+        pull-request-report: true
+      if: always()
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Fail if tests failed
       if: failure()
       run: exit 1
+
+
 
 
