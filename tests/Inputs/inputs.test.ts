@@ -13,7 +13,7 @@ test.describe('Tests for inputs page', () => {
 
 // test inputs on page: Input Number, Input Text, Input Password, Imput date
 
-  test('2. Should submit form and check submitted values', async ({ page }) => {
+  test('2. Should submit form and check submitted values @smoke1', async ({ page }) => {
       const inputsPage = new InputsPage(page);
       await inputsPage.navigate();
 
