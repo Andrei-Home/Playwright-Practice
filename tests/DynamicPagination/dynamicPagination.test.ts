@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import DynamicPaginationPage from '../../pages/practice.expandtesting.com/dynamic-pagination';
 
-test.describe('Dynamic Pagination Table', () => {
+test.describe('Dynamic Pagination Table @smoke1 @regression', () => {
 
     test('1. Should display table and pagination controls', async ({ page }) => {
         const paginationPage = new DynamicPaginationPage(page);
