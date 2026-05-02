@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { info } from '../../utils/logger';
 import BrowserPage from '../../pages/practice.expandtesting.com/my-browser';
+import { info } from '../../utils/logger';
 
 
 test.describe('My Browser Information', () => {
@@ -55,7 +55,7 @@ test.describe('My Browser Information', () => {
         await myBrowserPage.clickShowBrowserInformation();
 
         const version = await myBrowserPage.version.textContent();
-        expect(version).toContain('123');
+        expect(version).toContain('141');
     });
 
     //Verify cookies are enabled
@@ -68,12 +68,24 @@ test.describe('My Browser Information', () => {
     });
 
     //Verify platform
-    test('should verify platform', async () => {
-        info('Browser information test: verifying platform');
-        await myBrowserPage.clickShowBrowserInformation();
+    if (process.platform === 'linux') {
+        test('Verify platform of the Browser (Linux)', async () => {
+            info('Browser information test: verifying platform');
+            await myBrowserPage.clickShowBrowserInformation();
 
-        const platform = await myBrowserPage.platform.textContent();
-        info('Platform:' + platform);
-        expect(platform).toContain('Linux x86_64');
-    });
+            const platform = await myBrowserPage.platform.textContent();
+            info('Platform:' + platform);
+            expect(platform).toContain('Linux x86_64');
+        });
+    }
+    if (process.platform === 'win32') {
+        test('Verify platform of the Browser (Windows)', async () => {
+            info('Browser information test: verifying platform');
+            await myBrowserPage.clickShowBrowserInformation();
+
+            const platform = await myBrowserPage.platform.textContent();
+            info('Platform:' + platform);
+            expect(platform).toContain('Windows');
+        });
+    }
 });

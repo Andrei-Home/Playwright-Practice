@@ -8,39 +8,61 @@ const levelPriority: Record<LogLevel, number> = {
   debug: 3,
 };
 
-const defaultLevel: LogLevel = 'warn';
-const requestedLevel = (process.env.LOG_LEVEL?.toLowerCase() || defaultLevel) as LogLevel;
-const currentLevel: LogLevel = levels.includes(requestedLevel) ? requestedLevel : defaultLevel;
+export class Logger {
+  private readonly context: string;
+  private readonly currentLevel: LogLevel;
 
-function shouldLog(level: LogLevel) {
-  return levelPriority[level] <= levelPriority[currentLevel];
+  constructor(context: string = 'playwright') {
+    this.context = context;
+    
+    const defaultLevel: LogLevel = 'warn';
+    const requestedLevel = (process.env.LOG_LEVEL?.toLowerCase() || defaultLevel) as LogLevel;
+    this.currentLevel = levels.includes(requestedLevel) ? requestedLevel : defaultLevel;
+  }
+
+  private shouldLog(level: LogLevel): boolean {
+    return levelPriority[level] <= levelPriority[this.currentLevel];
+  }
+
+  private formatMessage(level: LogLevel, message: string, args: unknown[]) {
+    const prefix = `[${this.context}:${level.toUpperCase()}]`;
+    return [prefix, message, ...args];
+  }
+
+  error(message: string, ...args: unknown[]) {
+    if (!this.shouldLog('error')) return;
+    console.error(...this.formatMessage('error', message, args));
+  }
+
+  warn(message: string, ...args: unknown[]) {
+    if (!this.shouldLog('warn')) return;
+    console.warn(...this.formatMessage('warn', message, args));
+  }
+
+  info(message: string, ...args: unknown[]) {
+    if (!this.shouldLog('info')) return;
+    console.log(...this.formatMessage('info', message, args));
+  }
+
+  debug(message: string, ...args: unknown[]) {
+    if (!this.shouldLog('debug')) return;
+    console.debug(...this.formatMessage('debug', message, args));
+  }
+
+  getLogLevel(): LogLevel {
+    return this.currentLevel;
+  }
 }
 
-function formatMessage(level: LogLevel, message: string, args: unknown[]) {
-  const prefix = `[playwright:${level.toUpperCase()}]`;
-  return [prefix, message, ...args];
-}
+// Create a default instance for global use
+const defaultLogger = new Logger();
 
-export function error(message: string, ...args: unknown[]) {
-  if (!shouldLog('error')) return;
-  console.error(...formatMessage('error', message, args));
-}
+// Export named functions to maintain backward compatibility with existing imports
+export const error = (message: string, ...args: unknown[]) => defaultLogger.error(message, ...args);
+export const warn = (message: string, ...args: unknown[]) => defaultLogger.warn(message, ...args);
+export const info = (message: string, ...args: unknown[]) => defaultLogger.info(message, ...args);
+export const debug = (message: string, ...args: unknown[]) => defaultLogger.debug(message, ...args);
+export const getLogLevel = () => defaultLogger.getLogLevel();
 
-export function warn(message: string, ...args: unknown[]) {
-  if (!shouldLog('warn')) return;
-  console.warn(...formatMessage('warn', message, args));
-}
-
-export function info(message: string, ...args: unknown[]) {
-  if (!shouldLog('info')) return;
-  console.log(...formatMessage('info', message, args));
-}
-
-export function debug(message: string, ...args: unknown[]) {
-  if (!shouldLog('debug')) return;
-  console.debug(...formatMessage('debug', message, args));
-}
-
-export function getLogLevel() {
-  return currentLevel;
-}
+// Default export of the logger instance
+export default defaultLogger;

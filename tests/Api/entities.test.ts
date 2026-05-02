@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import EntitiesApi from '../../pages/apichallenges.eviltester.com/entities';
+import { error, warn, info, debug } from '../../utils/logger';
 
 test.describe('API - Entities endpoint', () => {
   test('1. Should return all 10 entities', async ({ request }) => {
