@@ -1,4 +1,4 @@
-name: Playwright Tests by label
+name: Run By Label
 
 on:
   workflow_dispatch:
@@ -40,7 +40,7 @@ jobs:
     steps:
 
     - name: Run Playwright tests
-      run: npx playwright test -g {{secret:TEST_LABEL}}
+      run: npx playwright test -g {{TEST_LABEL}}
       env:
         CI: true
 
