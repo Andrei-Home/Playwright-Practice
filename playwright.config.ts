@@ -12,6 +12,11 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  reporter: [
+    ['list'],
+    ['json', { outputFile: 'test-results.json' }],
+    ['html', { open: 'never' }]
+  ],
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -43,10 +48,10 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-//    {
- //     name: 'firefox',
- //     use: { ...devices['Desktop Firefox'] },
- //   },
+    //    {
+    //     name: 'firefox',
+    //     use: { ...devices['Desktop Firefox'] },
+    //   },
 
     // {
     //   name: 'webkit',
