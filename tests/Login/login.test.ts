@@ -2,6 +2,21 @@ import { test, expect } from '@playwright/test';
 import { Logger } from '../../utils/logger';
 import LoginPage from '../../pages/practice.expandtesting.com/login';
 
+const logindata = [
+    {
+        username: "practice",
+        password: "SuperSecretPassword!",
+    },
+    {
+        username: "aaa",
+        password: "aaa",
+    },
+    {
+        username: "practice",
+        password: "aaa",
+    },
+];
+
 test.describe('Login Page Tests', () => {
     let loginPage: LoginPage;
     const logger = new Logger('LoginPageTest');
@@ -40,4 +55,17 @@ test.describe('Login Page Tests', () => {
         await loginPage.login(testData);
         await expect(loginPage.errorMessage).toHaveText('Your password is invalid!');
     });
+
+    logindata.forEach((data, index) => {
+        test(`Data-driven test ${index + 1}: Login with username: ${data.username} and password: ${data.password}`, async ({ page }) => {
+            logger.info(`Running data-driven test with username: ${data.username} and password: ${data.password}`);
+            await loginPage.login(data);
+            if (data.username === "practice" && data.password === "SuperSecretPassword!") {
+                await expect(loginPage.successMessage).toHaveText('Secure Area page for Automation Testing Practice');
+            } else {
+                await expect(loginPage.errorMessage).toHaveText('Your password is invalid!');
+            }
+        });
+    });
+
 });
