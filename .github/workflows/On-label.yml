@@ -62,10 +62,10 @@ jobs:
             playwright-${{ matrix.browser }}-
 
       - name: Install Playwright
-        run: npm init playwright@latest --install-deps -y
+        run: npm init playwright@latest --install-deps
 
       - name: Install ${{ matrix.browser }} browser
-        run: npx playwright install ${{ matrix.browser }}
+        run: npx playwright install ${{ matrix.browser }} --no-shell
 
       - name: Run Playwright tests
         run: npx playwright test -g "${{ github.event.inputs.TEST_LABEL }}" --project=${{ matrix.browser }}
