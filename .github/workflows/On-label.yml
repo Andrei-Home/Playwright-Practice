@@ -68,7 +68,7 @@ jobs:
         run: npx playwright install ${{ matrix.browser }}
 
       - name: Run Playwright tests
-        run: npx playwright test -g "${{ github.event.inputs.TEST_LABEL }}"
+        run: npx playwright test -g "${{ github.event.inputs.TEST_LABEL }}" --project=${{ matrix.browser }}
         env:
           CI: true
 
