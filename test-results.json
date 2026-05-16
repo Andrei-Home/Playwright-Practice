@@ -1,0 +1,2269 @@
+{
+  "config": {
+    "configFile": "/home/andrei/Documents/Playwright-Practice/playwright.config.ts",
+    "rootDir": "/home/andrei/Documents/Playwright-Practice/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 12
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/andrei/Documents/Playwright-Practice/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 12
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/andrei/Documents/Playwright-Practice/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/andrei/Documents/Playwright-Practice/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 12
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/andrei/Documents/Playwright-Practice/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "3way",
+    "version": "1.56.1",
+    "workers": 12,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "Api/entities-with-util.test.ts",
+      "file": "Api/entities-with-util.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API - Entities endpoint with Utils",
+          "file": "Api/entities-with-util.test.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "1. Should return all 10 entities",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 534,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.367Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6c2f071aed06e8243ead-3760f39ac42bc2b161f7",
+              "file": "Api/entities-with-util.test.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "2. Create a new entity",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 500,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.384Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6c2f071aed06e8243ead-d16ce99ed371fea03606",
+              "file": "Api/entities-with-util.test.ts",
+              "line": 34,
+              "column": 9
+            },
+            {
+              "title": "3. Should update an entity",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 688,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.380Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6c2f071aed06e8243ead-6a7e5a08f5a674badc18",
+              "file": "Api/entities-with-util.test.ts",
+              "line": 55,
+              "column": 9
+            },
+            {
+              "title": "4. Should delete an entity",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 703,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.382Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6c2f071aed06e8243ead-e566001ff93e91856b09",
+              "file": "Api/entities-with-util.test.ts",
+              "line": 74,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Api/entities.test.ts",
+      "file": "Api/entities.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API - Entities endpoint",
+          "file": "Api/entities.test.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "1. Should return all 10 entities",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 528,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.369Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d310aa5ef9e2741cb203-aaeb8f733bc00f4e0492",
+              "file": "Api/entities.test.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "2. Create a new entity",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 511,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.376Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d310aa5ef9e2741cb203-6821fea113c3ac8d15bc",
+              "file": "Api/entities.test.ts",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "3. Should update an entity",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 6,
+                      "status": "passed",
+                      "duration": 728,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.364Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d310aa5ef9e2741cb203-fe154aca3e5acdc2d9c2",
+              "file": "Api/entities.test.ts",
+              "line": 53,
+              "column": 7
+            },
+            {
+              "title": "4. Should delete an entity",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 7,
+                      "status": "passed",
+                      "duration": 699,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.387Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d310aa5ef9e2741cb203-f803ad0385491ccd1aa2",
+              "file": "Api/entities.test.ts",
+              "line": 72,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Api/todos.test.ts",
+      "file": "Api/todos.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API - Todos Challenges",
+          "file": "Api/todos.test.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Challenge 03: GET /todos (200)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 8,
+                      "status": "passed",
+                      "duration": 713,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.379Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-a501a37dcd9fd35cdbbe",
+              "file": "Api/todos.test.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "Challenge 04: GET /todo (404) not plural",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 9,
+                      "status": "passed",
+                      "duration": 700,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "[TodosApi:WARN] API Request failed. Status: 404, Body: { errorMessages: [ \u001b[32m'404 resource Unknown'\u001b[39m ] }\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.388Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-be4067738a7aca263edc",
+              "file": "Api/todos.test.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "Challenge 05: GET /todos/{id} (200)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 10,
+                      "status": "passed",
+                      "duration": 906,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.382Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-0c9e8cb10c5f259ccee5",
+              "file": "Api/todos.test.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "Challenge 06: GET /todos/{id} (404)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 11,
+                      "status": "passed",
+                      "duration": 707,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "[TodosApi:WARN] API Request failed. Status: 404, Body: { errorMessages: [ \u001b[32m'Could not find an instance with todos/999999'\u001b[39m ] }\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.397Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-ce35ebf09e0903f6cb3d",
+              "file": "Api/todos.test.ts",
+              "line": 42,
+              "column": 7
+            },
+            {
+              "title": "Challenge 07: GET /todos (200)?filter",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 383,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.902Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-1403409d33247b35a430",
+              "file": "Api/todos.test.ts",
+              "line": 47,
+              "column": 7
+            },
+            {
+              "title": "Challenge 08: GET /todos (400) filter not defined",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 378,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "[TodosApi:WARN] API Request failed. Status: 400, Body: {\"errorMessages\":[\"not-a-boolean is not boolean\"]}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.906Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-4163b82711926fd879cf",
+              "file": "Api/todos.test.ts",
+              "line": 58,
+              "column": 7
+            },
+            {
+              "title": "Challenge 09: POST /todos (201)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 392,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.915Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-0e93fc20a99c98480474",
+              "file": "Api/todos.test.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "Challenge 10: POST /todos (400) doneStatus",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 395,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "[TodosApi:WARN] API Request failed. Status: 400, Body: {\n  errorMessages: [ \u001b[32m'Failed Validation: doneStatus should be BOOLEAN but was STRING'\u001b[39m ]\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:48.917Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-6275c5193c2ce136051c",
+              "file": "Api/todos.test.ts",
+              "line": 74,
+              "column": 7
+            },
+            {
+              "title": "Challenge 11: POST /todos (400) title too long",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 381,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "[TodosApi:WARN] API Request failed. Status: 400, Body: {\n  errorMessages: [\n    \u001b[32m'Failed Validation: Maximum allowable length exceeded for title - maximum allowed is 50'\u001b[39m\n  ]\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.084Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-054bd6f426f1d7dd6630",
+              "file": "Api/todos.test.ts",
+              "line": 83,
+              "column": 7
+            },
+            {
+              "title": "Challenge 12: POST /todos (400) description too long",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 387,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "[TodosApi:WARN] API Request failed. Status: 400, Body: {\n  errorMessages: [\n    \u001b[32m'Failed Validation: Maximum allowable length exceeded for description - maximum allowed is 200'\u001b[39m\n  ]\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.103Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-fec4bee67a634a9e834b",
+              "file": "Api/todos.test.ts",
+              "line": 92,
+              "column": 7
+            },
+            {
+              "title": "Challenge 13: POST /todos (201) max out content",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 7,
+                      "status": "passed",
+                      "duration": 388,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.104Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-9bd168f07828495dac52",
+              "file": "Api/todos.test.ts",
+              "line": 101,
+              "column": 7
+            },
+            {
+              "title": "Challenge 14: POST /todos (413) content too long",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 9,
+                      "status": "passed",
+                      "duration": 384,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "[TodosApi:WARN] API Request failed. Status: 413, Body: {\n  errorMessages: [ \u001b[32m'Error: Request body too large, max allowed is 5000 bytes'\u001b[39m ]\n}\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.103Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-f3b587058418d045f1ab",
+              "file": "Api/todos.test.ts",
+              "line": 110,
+              "column": 7
+            },
+            {
+              "title": "Challenge 15: POST /todos (400) extra",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 6,
+                      "status": "passed",
+                      "duration": 389,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [
+                        {
+                          "text": "[TodosApi:WARN] API Request failed. Status: 400, Body: { errorMessages: [ \u001b[32m'Could not find field: priority'\u001b[39m ] }\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.110Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "daa66c462b7cea08bd03-6e0a00573c80a6474484",
+              "file": "Api/todos.test.ts",
+              "line": 119,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DynamicPagination/dynamicPagination.test.ts",
+      "file": "DynamicPagination/dynamicPagination.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dynamic Pagination Table @smoke1 @regression",
+          "file": "DynamicPagination/dynamicPagination.test.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "1. Should display table and pagination controls",
+              "ok": true,
+              "tags": [
+                "smoke1",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 8,
+                      "status": "passed",
+                      "duration": 2716,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.112Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b123e566589e06f40439-87c2a260eb11152d6dfd",
+              "file": "DynamicPagination/dynamicPagination.test.ts",
+              "line": 6,
+              "column": 9
+            },
+            {
+              "title": "2. Should navigate to page 2",
+              "ok": true,
+              "tags": [
+                "smoke1",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 11,
+                      "status": "passed",
+                      "duration": 2892,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.121Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b123e566589e06f40439-2c036196fa487c37eb1f",
+              "file": "DynamicPagination/dynamicPagination.test.ts",
+              "line": 16,
+              "column": 9
+            },
+            {
+              "title": "3. Should navigate using Next button",
+              "ok": true,
+              "tags": [
+                "smoke1",
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2228,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.294Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b123e566589e06f40439-c4f36910c7e6573da79e",
+              "file": "DynamicPagination/dynamicPagination.test.ts",
+              "line": 34,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DynamicPagination/inspect.spec.ts",
+      "file": "DynamicPagination/inspect.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Inspect Dynamic Pagination Page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 2588,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-16T10:12:49.298Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a591d3153c31b85a0834-e205fd192261e1f8a1bf",
+          "file": "DynamicPagination/inspect.spec.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "Inputs/inputs.test.ts",
+      "file": "Inputs/inputs.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Tests for inputs page",
+          "file": "Inputs/inputs.test.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "1. Has title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 10,
+                      "status": "passed",
+                      "duration": 1984,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.306Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "48fe0a371d319742e13b-6dcb219adb19578e900d",
+              "file": "Inputs/inputs.test.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "2. Should submit form and check submitted values @smoke1",
+              "ok": true,
+              "tags": [
+                "smoke1"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 2251,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.317Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "48fe0a371d319742e13b-a807ad2c54f37efbc91f",
+              "file": "Inputs/inputs.test.ts",
+              "line": 18,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Login/login.test.ts",
+      "file": "Login/login.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login Page Tests",
+          "file": "Login/login.test.ts",
+          "line": 20,
+          "column": 6,
+          "specs": [
+            {
+              "title": "1. Should login with valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4756,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.322Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36ca9ae8044642276138-aefecd85d4329888df36",
+              "file": "Login/login.test.ts",
+              "line": 29,
+              "column": 9
+            },
+            {
+              "title": "2. Should not login with invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 5789,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.474Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36ca9ae8044642276138-2a98aedb5f0e00e64424",
+              "file": "Login/login.test.ts",
+              "line": 39,
+              "column": 9
+            },
+            {
+              "title": "3. Should not login with invalid password for a valid user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 9,
+                      "status": "passed",
+                      "duration": 5896,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.497Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36ca9ae8044642276138-47610af913bb78600feb",
+              "file": "Login/login.test.ts",
+              "line": 49,
+              "column": 9
+            },
+            {
+              "title": "Data-driven test 1: Login with username: practice and password: SuperSecretPassword!",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 5799,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.501Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36ca9ae8044642276138-20bb115f191201df69fc",
+              "file": "Login/login.test.ts",
+              "line": 60,
+              "column": 13
+            },
+            {
+              "title": "Data-driven test 2: Login with username: aaa and password: aaa",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 7,
+                      "status": "passed",
+                      "duration": 5660,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.502Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36ca9ae8044642276138-5976d73266542c4fcc66",
+              "file": "Login/login.test.ts",
+              "line": 60,
+              "column": 13
+            },
+            {
+              "title": "Data-driven test 3: Login with username: practice and password: aaa",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 6,
+                      "status": "passed",
+                      "duration": 5251,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:49.510Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "36ca9ae8044642276138-f8851e0575f1c38764bc",
+              "file": "Login/login.test.ts",
+              "line": 60,
+              "column": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "MyBrowser/my-browser.spec.ts",
+      "file": "MyBrowser/my-browser.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "My Browser Information",
+          "file": "MyBrowser/my-browser.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display browser information when the button is clicked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2324,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:52.001Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dd61ba43aa16b0e0e01-1363631e0d38d140bc53",
+              "file": "MyBrowser/my-browser.spec.ts",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "should verify user agent contains chromium",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 10,
+                      "status": "passed",
+                      "duration": 2248,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:52.095Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dd61ba43aa16b0e0e01-789c24760a9f516570a7",
+              "file": "MyBrowser/my-browser.spec.ts",
+              "line": 26,
+              "column": 9
+            },
+            {
+              "title": "should verify codename is Mozilla",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 8,
+                      "status": "passed",
+                      "duration": 2177,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:52.132Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dd61ba43aa16b0e0e01-10f9a85306456cca5262",
+              "file": "MyBrowser/my-browser.spec.ts",
+              "line": 35,
+              "column": 9
+            },
+            {
+              "title": "should verify name is Chrome",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 11,
+                      "status": "passed",
+                      "duration": 2186,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:52.502Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dd61ba43aa16b0e0e01-901371d753f74ba473c9",
+              "file": "MyBrowser/my-browser.spec.ts",
+              "line": 44,
+              "column": 9
+            },
+            {
+              "title": "should verify version",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 2208,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:52.532Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dd61ba43aa16b0e0e01-0eb40ba806bc0a83c2aa",
+              "file": "MyBrowser/my-browser.spec.ts",
+              "line": 53,
+              "column": 9
+            },
+            {
+              "title": "should verify cookies are enabled",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 2240,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:52.532Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dd61ba43aa16b0e0e01-e32ffdfe5112fa2215c0",
+              "file": "MyBrowser/my-browser.spec.ts",
+              "line": 62,
+              "column": 9
+            },
+            {
+              "title": "Verify platform of the Browser (Linux)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 8,
+                      "status": "passed",
+                      "duration": 1956,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:54.318Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6dd61ba43aa16b0e0e01-1ca0f327ddfb2bd83437",
+              "file": "MyBrowser/my-browser.spec.ts",
+              "line": 72,
+              "column": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "OTP/otp.test.ts",
+      "file": "OTP/otp.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "OTP Login",
+          "file": "OTP/otp.test.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "1. Should login with valid email and valid otp",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5065,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:54.333Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8d8a766b3ec4d8c92d69-d0c1158cef4bbd6627fe",
+              "file": "OTP/otp.test.ts",
+              "line": 7,
+              "column": 9
+            },
+            {
+              "title": "2. Should login with valid email and invalid OTP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 10,
+                      "status": "passed",
+                      "duration": 4649,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-16T10:12:54.353Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8d8a766b3ec4d8c92d69-0b57ff357447a1955886",
+              "file": "OTP/otp.test.ts",
+              "line": 23,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Radio-Buttons/radio-buttons.test.ts",
+      "file": "Radio-Buttons/radio-buttons.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Radio Buttons",
+          "file": "Radio-Buttons/radio-buttons.test.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Color Selection @smoke1",
+              "file": "Radio-Buttons/radio-buttons.test.ts",
+              "line": 14,
+              "column": 10,
+              "specs": [
+                {
+                  "title": "should select blue color",
+                  "ok": true,
+                  "tags": [
+                    "smoke1"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 11,
+                          "parallelIndex": 11,
+                          "status": "passed",
+                          "duration": 1952,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-16T10:12:54.698Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "dd62503bbbf59a4f6f04-38faf4ddd65e8de0277a",
+                  "file": "Radio-Buttons/radio-buttons.test.ts",
+                  "line": 15,
+                  "column": 13
+                },
+                {
+                  "title": "should select red color",
+                  "ok": true,
+                  "tags": [
+                    "smoke1"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 5,
+                          "status": "passed",
+                          "duration": 2016,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-16T10:12:54.751Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "dd62503bbbf59a4f6f04-92b807101397827fe466",
+                  "file": "Radio-Buttons/radio-buttons.test.ts",
+                  "line": 21,
+                  "column": 13
+                },
+                {
+                  "title": "should select yellow color",
+                  "ok": true,
+                  "tags": [
+                    "smoke1"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 4,
+                          "status": "passed",
+                          "duration": 1985,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-16T10:12:54.784Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "dd62503bbbf59a4f6f04-ace97edbe3d5a296aef9",
+                  "file": "Radio-Buttons/radio-buttons.test.ts",
+                  "line": 27,
+                  "column": 13
+                },
+                {
+                  "title": "should select black color",
+                  "ok": true,
+                  "tags": [
+                    "smoke1"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "parallelIndex": 6,
+                          "status": "passed",
+                          "duration": 1960,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-16T10:12:54.812Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "dd62503bbbf59a4f6f04-cc9c7ee17e8fb1597110",
+                  "file": "Radio-Buttons/radio-buttons.test.ts",
+                  "line": 33,
+                  "column": 13
+                },
+                {
+                  "title": "should not allow selection of green color as it is disabled",
+                  "ok": true,
+                  "tags": [
+                    "smoke1"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1972,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-16T10:12:55.211Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "dd62503bbbf59a4f6f04-a9eaa1421c29ffaf820d",
+                  "file": "Radio-Buttons/radio-buttons.test.ts",
+                  "line": 39,
+                  "column": 13
+                }
+              ]
+            },
+            {
+              "title": "Sport Selection",
+              "file": "Radio-Buttons/radio-buttons.test.ts",
+              "line": 45,
+              "column": 10,
+              "specs": [
+                {
+                  "title": "should select basketball sport",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 7,
+                          "parallelIndex": 7,
+                          "status": "passed",
+                          "duration": 1970,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-16T10:12:55.213Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "dd62503bbbf59a4f6f04-19f70609069b8d9f7bd6",
+                  "file": "Radio-Buttons/radio-buttons.test.ts",
+                  "line": 46,
+                  "column": 13
+                },
+                {
+                  "title": "should select football sport",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
+                          "status": "passed",
+                          "duration": 1987,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-16T10:12:55.313Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "dd62503bbbf59a4f6f04-e369958042e3a9ae6c18",
+                  "file": "Radio-Buttons/radio-buttons.test.ts",
+                  "line": 52,
+                  "column": 13
+                },
+                {
+                  "title": "should select tennis sport",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 3,
+                          "status": "passed",
+                          "duration": 1953,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-16T10:12:55.347Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "dd62503bbbf59a4f6f04-41c74b102e5937612240",
+                  "file": "Radio-Buttons/radio-buttons.test.ts",
+                  "line": 58,
+                  "column": 13
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Register/register.test.ts",
+      "file": "Register/register.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "1. Should register with short username/password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 9,
+                  "status": "passed",
+                  "duration": 3771,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-16T10:12:55.446Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b19dda2d546d4faa4558-5db71c204d65f05ec92d",
+          "file": "Register/register.test.ts",
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "2. Should register with empty username",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 8,
+                  "status": "passed",
+                  "duration": 3764,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-16T10:12:56.286Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b19dda2d546d4faa4558-202ff710a7d2e1a165f9",
+          "file": "Register/register.test.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "3. Should register with incorrect confirmation password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 11,
+                  "status": "passed",
+                  "duration": 3823,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-16T10:12:56.661Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b19dda2d546d4faa4558-ac46be79cb9713056438",
+          "file": "Register/register.test.ts",
+          "line": 33,
+          "column": 5
+        },
+        {
+          "title": "4. Should register with Success",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 3906,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-16T10:12:56.779Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b19dda2d546d4faa4558-626786c513389043832b",
+          "file": "Register/register.test.ts",
+          "line": 46,
+          "column": 5
+        },
+        {
+          "title": "5. Should register with a very long username",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 3720,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-16T10:12:56.779Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b19dda2d546d4faa4558-fd7dfaa6570020c0f081",
+          "file": "Register/register.test.ts",
+          "line": 62,
+          "column": 5
+        },
+        {
+          "title": "6. Should register with a username that contains invalid characters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 6,
+                  "status": "passed",
+                  "duration": 3819,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-16T10:12:56.782Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b19dda2d546d4faa4558-583d452e4b6250ed3974",
+          "file": "Register/register.test.ts",
+          "line": 75,
+          "column": 5
+        },
+        {
+          "title": "7. Should register with a username that contains short username",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 7,
+                  "status": "passed",
+                  "duration": 3792,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-16T10:12:57.193Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b19dda2d546d4faa4558-d656ee19a233a7a70ca5",
+          "file": "Register/register.test.ts",
+          "line": 87,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-16T10:12:47.409Z",
+    "duration": 13608.017,
+    "expected": 57,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
