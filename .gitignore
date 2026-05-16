@@ -8,3 +8,4 @@ node_modules/
 /playwright/.auth/
 a.md
 .env
+inspect_output.txt
