@@ -25,6 +25,15 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps
+
+    - name: Run Playwright tests
+      run: npx playwright test
+      env:
+        CI: true
+
+
 
         
 
@@ -34,14 +43,6 @@ jobs:
     timeout-minutes: 60
     runs-on: self-hosted
     steps:
-
-    - name: Install Playwright
-      run: npm init playwright@latest
-      
-    - name: Run Playwright tests
-      run: npx playwright test
-      env:
-        CI: true
 
     - name: Upload Playwright report
       uses: actions/upload-artifact@v4
