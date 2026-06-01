@@ -54,9 +54,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.cache/ms-playwright
-          key: playwright-${{ matrix.browser }}-${{ runner.os }}
+          key: playwright-chromium-${{ runner.os }}
           restore-keys: |
-            playwright-${{ matrix.browser }}-
+            playwright-chromium-
 
       - name: Install Playwright
         run: npm init playwright@latest --install-deps
@@ -65,7 +65,7 @@ jobs:
         run: npx playwright install chromium --no-shell
 
       - name: Run Playwright tests
-        run: npx playwright test -g "${{ github.event.inputs.TEST_LABEL }}"
+        run: npx playwright test -g "${{ github.event.inputs.TEST_LABEL }}" --project=chromium
         env:
           CI: true
 
@@ -73,7 +73,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: playwright-report
+          name: playwright-report-chromium
           path: playwright-report/
           retention-days: 30
 
