@@ -29,7 +29,7 @@ jobs:
       run: npm init playwright@latest --install-deps -y
     
     - name: Install cromium shell
-      run: npx playwright install chromium
+      run: npx playwright install chromium --no-shell
 
 
   run-tests:
