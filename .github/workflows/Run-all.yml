@@ -22,7 +22,14 @@ jobs:
         node-version: '24'
         cache: 'npm'
 
+    - name: Install dependencies
+      run: npm ci
 
+    - name: Install Playwright
+      run: npm init playwright@latest --install-deps -y
+
+    - name: Install chromium-headless-shell browser
+      run: npx playwright install chromium-headless-shell
     
 
 
