@@ -62,7 +62,7 @@ jobs:
         run: npm init playwright@latest --install-deps
 
       - name: Install chromium browser
-        run: npx playwright install chromium --no-shell
+        run: npx playwright install chromium-headless-shell
 
       - name: Run Playwright tests
         run: npx playwright test -g "${{ github.event.inputs.TEST_LABEL }}" --project=chromium

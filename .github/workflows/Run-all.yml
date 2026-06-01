@@ -28,8 +28,8 @@ jobs:
     - name: Install Playwright
       run: npm init playwright@latest --install-deps -y
     
-    - name: Install cromium shell
-      run: npx playwright install chromium --no-shell
+    - name: Install chromium shell
+      run: npx playwright install chromium-headless-shell
 
 
   run-tests:
