@@ -42,7 +42,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Playwright
-        run: npx playwright install --with-deps
+        run: npm init playwright@latest
 
       - name: Run Playwright tests
         run: npx playwright test -g "${{ github.event.inputs.TEST_LABEL }}" --project=chromium
