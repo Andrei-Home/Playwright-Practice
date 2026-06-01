@@ -26,10 +26,8 @@ jobs:
       run: npm ci
 
     - name: Install Playwright
-      run: npm init playwright@latest --install-deps -y
+      run: npx playwright install --with-deps
     
-    - name: Install chromium shell
-      run: npx playwright install chromium-headless-shell
 
 
   run-tests:

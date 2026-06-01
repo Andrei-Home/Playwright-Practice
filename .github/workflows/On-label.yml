@@ -50,19 +50,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Cache Playwright browsers
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-chromium-${{ runner.os }}
-          restore-keys: |
-            playwright-chromium-
-
       - name: Install Playwright
-        run: npm init playwright@latest --install-deps
+        run: npx playwright install --with-deps
 
-      - name: Install chromium browser
-        run: npx playwright install chromium-headless-shell
 
       - name: Run Playwright tests
         run: npx playwright test -g "${{ github.event.inputs.TEST_LABEL }}" --project=chromium
