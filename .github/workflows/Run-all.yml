@@ -26,7 +26,7 @@ jobs:
       run: npm ci
 
     - name: Install Playwright
-      run: npm init playwright@1.60 --install-deps -y
+      run: npm init playwright@latest --install-deps -y
     
     - name: Install cromium shell
       run: npx playwright install chromium
